@@ -1,15 +1,40 @@
-let code = [];
+const listArray = 
+[{
+    name: 'Make Dishes',
+    dueDate: '2022-12-12'
+},
+{
+    name: 'Clean Floor',
+    dueDate: '2022-12-12'
+}];
 
-function addHTML(){
-    const elementTodo = document.getElementById('lists');
-    const elementDate = document.getElementById('date');
-    code += `<div class="names">
-                <p class="js-list">${elementTodo.value}</p>
-                <p class="js-date">${elementDate.value}</p>
-                <button class="js-delete" onclick="deleteList(${elementTodo.value})">Delete</button>
-            </div>`;
-    document.getElementById('addNames').innerHTML = code;
+generateHTML();
+function generateHTML(){
+    let HTMLcode = '';
+    for(let i=0;i<listArray.length;i++){
+        const {name} = listArray[i];
+        let {dueDate} = listArray[i];
+        dueDate = listArray[i].dueDate === '' ? 'No Date': dueDate;
+        const html =`<p>
+                        ${name}
+                        ${dueDate}
+                        <button onclick="
+                            listArray.splice(${i},1);
+                            generateHTML();
+                        ">Delete</button>
+                    </p>
+                    `;
+        HTMLcode += html;
+    }
+    document.querySelector(".js-add-list").innerHTML = HTMLcode;
 }
-function deleteList(list){
-    
+
+function addToArray(){
+    const name = document.querySelector(".text").value;
+    const dueDate = document.querySelector(".date").value;
+    // const obj = {name: name, dueDate: dueDate};
+    const obj = {name, dueDate}; // ShortHand Syntax
+    listArray.push(obj);
+    document.querySelector(".text").value = '';
+    generateHTML();
 }
