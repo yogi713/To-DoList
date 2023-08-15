@@ -11,13 +11,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 .js-output-grid, .js-input-grid{
     display: grid;
     grid-template-columns: 200px 150px 100px;
     gap: 10px;
-    align-items: stretch; 
+    /* align-items: stretch;  */
     /* vertical-align:middle; */
 }
 .js-input-grid{
@@ -25,7 +24,7 @@ body{
 }
 .text, .date, .add, .delete{
     font-size: 15px;
-    padding: 6px;
+    padding: 0px;
     border: none;
     text-align: center;
     transition: border 1s;
