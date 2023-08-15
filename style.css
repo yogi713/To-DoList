@@ -33,7 +33,7 @@ body{
     border-radius: 5px;
 }
 .date{
-    max-width: 110px;
+    max-width: 10px;
 }
 .text:focus, .date:focus{
     outline: none;
