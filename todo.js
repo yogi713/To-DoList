@@ -15,14 +15,14 @@ function generateHTML(){
         const {name} = listArray[i];
         let {dueDate} = listArray[i];
         dueDate = listArray[i].dueDate === '' ? 'No Date': dueDate;
-        const html =`<p>
-                        ${name}
-                        ${dueDate}
-                        <button onclick="
-                            listArray.splice(${i},1);
-                            generateHTML();
-                        ">Delete</button>
-                    </p>
+        const html =
+                    `
+                    <div>${name}</div>
+                    <div>${dueDate}</div>
+                    <button class="delete" onclick="
+                    listArray.splice(${i},1);
+                    generateHTML();
+                    ">Delete</button>   
                     `;
         HTMLcode += html;
     }
