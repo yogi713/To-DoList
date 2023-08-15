@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="todo.js"></script>
 </head>
 <body>
-    <p>To-Do List</p>
-    <div class="js-input-grid">
-        <input type="text" class="text" placeholder="To-do name">
-        <input type="date" class="date">
-        <button class="add" onclick="addToArray()">Add</button>
+    <div class="container">
+        <h2>To-Do List</h2>
+        <div class="js-input-grid">
+            <input type="text" class="text" placeholder="To-do name" onclick="darkBody()">
+            <input type="date" onfocus="(this.type='date')" class="date" min="2023-08-15">
+            <button class="add" onclick="addToArray()">Add</button>
+        </div>
+        <div class="js-add-list js-output-grid"></div>
     </div>
-    <div class="js-add-list js-output-grid"></div>
-    <script src="todo.js"></script>
 </body>
 </html>
