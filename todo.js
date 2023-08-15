@@ -1,15 +1,7 @@
-const listArray = 
-[{
-    name: 'Make Dishes',
-    dueDate: '2022-12-12'
-},
-{
-    name: 'Clean Floor',
-    dueDate: '2022-12-12'
-}];
+const listArray = [];
 
 function darkBody(){
-    document.querySelector('body').style.background= "linear-gradient(135deg, #34556b, #2e316b)";
+    document.querySelector('body').style.background= "#333670";
 }
 
 // generateHTML();
@@ -44,5 +36,6 @@ function addToArray(){
     const obj = {name, dueDate}; // ShortHand Syntax
     listArray.push(obj);
     document.querySelector(".text").value = '';
+    document.querySelector('body').style.background= "#424688";
     generateHTML();
 }
