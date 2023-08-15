@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* border: solid 1px black; */
+}
+.add, .js-delete{
+    color: white;
+    background-color: rgb(0, 153, 0);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.js-date{
+    margin-left: -30px;
+}
+.js-delete{
+    background-color: rgb(175, 6, 6);
+    padding: 5px 13px;
+    /* max-height: 50px; */
+}
+#addNames{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.names{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.js-list{
+    min-width:200px;
+}
