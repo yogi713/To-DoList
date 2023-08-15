@@ -14,13 +14,15 @@ body{
 }
 .js-output-grid, .js-input-grid{
     display: grid;
-    grid-template-columns: 200px 150px 100px;
+    grid-template-columns: 120px 120px 70px;
     gap: 10px;
-    /* align-items: stretch;  */
-    /* vertical-align:middle; */
+    align-items: stretch; 
 }
 .js-input-grid{
     margin-bottom: 50px;
+}
+.js-output-grid{
+    align-items: center;
 }
 .text, .date, .add, .delete{
     font-size: 15px;
