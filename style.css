@@ -32,6 +32,9 @@ body{
     transition: border 1s;
     border-radius: 5px;
 }
+.date{
+    max-width: 110px;
+}
 .text:focus, .date:focus{
     outline: none;
     box-shadow: 0px 0px 5px rgb(0, 0, 0); 
